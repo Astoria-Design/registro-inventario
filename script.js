@@ -57,7 +57,7 @@ function submitData() {
 
     if (data.length > 0) {
         // Llamada AJAX para enviar los datos al backend de Google Apps Script
-        fetch('https://script.google.com/macros/s/your_script_id/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbwaBILDSSkt7StoIyCzwj02Hax_PsAv-5ss3jgtmQ98OjjseyPL2xHQAkw5IOmukSsnzg/exec', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
