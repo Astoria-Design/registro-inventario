@@ -1,7 +1,7 @@
 // Cargar los productos desde Google Sheets
 function loadProducts() {
     // Reemplaza 'URL_DE_TU_APLICACION_WEB' con la URL de tu aplicación web en Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbzdklG52OrjshZn_CNneoUf-xg1pIEmkjmKy4yqNmM02i9eCz7vV_9HN1gNHjC7Yhg9-g/exec', {
+    fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbzdklG52OrjshZn_CNneoUf-xg1pIEmkjmKy4yqNmM02i9eCz7vV_9HN1gNHjC7Yhg9-g/exec', {
         method: 'GET'
     })
     .then(response => response.json())  // Convertir la respuesta a formato JSON
@@ -62,7 +62,7 @@ function submitData() {
 
     if (data.length > 0) {
         // Llamada AJAX para enviar los datos al backend de Google Apps Script
-        fetch('https://script.google.com/macros/s/AKfycbzdklG52OrjshZn_CNneoUf-xg1pIEmkjmKy4yqNmM02i9eCz7vV_9HN1gNHjC7Yhg9-g/exec', {
+        fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbzdklG52OrjshZn_CNneoUf-xg1pIEmkjmKy4yqNmM02i9eCz7vV_9HN1gNHjC7Yhg9-g/exec', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
